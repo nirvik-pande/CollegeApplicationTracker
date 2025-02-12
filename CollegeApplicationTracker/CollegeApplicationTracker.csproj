@@ -64,6 +64,12 @@
     <Compile Include="ApplicationDashboard.Designer.cs">
       <DependentUpon>ApplicationDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="UpdateApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateApplication.Designer.cs">
+      <DependentUpon>UpdateApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ApplicationDashboard.resx">
       <DependentUpon>ApplicationDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateApplication.resx">
+      <DependentUpon>UpdateApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginPage.resx">
       <DependentUpon>LoginPage.cs</DependentUpon>
@@ -106,5 +115,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
