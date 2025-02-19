@@ -64,6 +64,12 @@
     <Compile Include="ApplicationDashboard.Designer.cs">
       <DependentUpon>ApplicationDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddNewApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNewApplication.Designer.cs">
+      <DependentUpon>AddNewApplication.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateApplication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +84,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddNewApplication.resx">
+      <DependentUpon>AddNewApplication.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CreateAccount.resx">
       <DependentUpon>CreateAccount.cs</DependentUpon>
     </EmbeddedResource>
