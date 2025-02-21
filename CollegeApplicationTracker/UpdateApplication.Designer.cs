@@ -52,7 +52,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(218, 26);
+            this.label1.Location = new System.Drawing.Point(265, 24);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(306, 40);
             this.label1.TabIndex = 18;
@@ -79,6 +79,7 @@
             this.label4.Size = new System.Drawing.Size(40, 15);
             this.label4.TabIndex = 26;
             this.label4.Text = "Name:";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // textBox3
             // 
@@ -87,6 +88,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(181, 20);
             this.textBox3.TabIndex = 32;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // textBox4
             // 
@@ -95,6 +97,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(181, 20);
             this.textBox4.TabIndex = 33;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // textBox5
             // 
@@ -103,6 +106,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(181, 20);
             this.textBox5.TabIndex = 34;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // textBox1
             // 
@@ -111,6 +115,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(181, 20);
             this.textBox1.TabIndex = 35;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label6
             // 
@@ -122,6 +127,7 @@
             this.label6.Size = new System.Drawing.Size(57, 15);
             this.label6.TabIndex = 36;
             this.label6.Text = "Location:";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label2
             // 
@@ -133,6 +139,7 @@
             this.label2.Size = new System.Drawing.Size(60, 15);
             this.label2.TabIndex = 37;
             this.label2.Text = "Due Date:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label7
             // 
@@ -144,6 +151,7 @@
             this.label7.Size = new System.Drawing.Size(54, 15);
             this.label7.TabIndex = 38;
             this.label7.Text = "Platform:";
+            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label3
             // 
@@ -175,6 +183,7 @@
             this.button1.TabIndex = 41;
             this.button1.Text = "Update";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -185,6 +194,7 @@
             this.button2.TabIndex = 42;
             this.button2.Text = "Back";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // checkedListBox1
             // 
@@ -199,6 +209,7 @@
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(120, 72);
             this.checkedListBox1.TabIndex = 43;
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -210,6 +221,7 @@
             this.label5.Size = new System.Drawing.Size(107, 15);
             this.label5.TabIndex = 44;
             this.label5.Text = "Application Status";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // UpdateApplication
             // 
