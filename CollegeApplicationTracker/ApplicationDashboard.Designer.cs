@@ -1,4 +1,7 @@
-﻿namespace CollegeApplicationTracker
+﻿using System.Collections.Generic;
+using System;
+
+namespace CollegeApplicationTracker
 {
     partial class Form2
     {

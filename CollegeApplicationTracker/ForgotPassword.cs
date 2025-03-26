@@ -26,5 +26,28 @@ namespace CollegeApplicationTracker
         {
 
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Navigate to the Login page without a message
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
+            this.Hide();
+        }
+
+        private void Submit_Click(object sender, EventArgs e)
+        {
+            string email = textBox3.Text;
+
+            // Add logic to handle email submission
+            // For example, send an email with reset instructions
+
+            MessageBox.Show("An email with reset instructions has been sent to " + email);
+
+            // Navigate to the Login page
+            LoginPage loginPage = new LoginPage();
+            loginPage.Show();
+            this.Hide();
+        }
     }
 }
