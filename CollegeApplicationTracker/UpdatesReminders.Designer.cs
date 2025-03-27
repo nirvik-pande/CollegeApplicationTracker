@@ -42,6 +42,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -147,7 +150,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.Location = new System.Drawing.Point(606, 432);
+            this.button3.Location = new System.Drawing.Point(633, 432);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(86, 46);
             this.button3.TabIndex = 55;
@@ -175,12 +178,45 @@
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Common Application Tips and Tricks";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(447, 263);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(36, 15);
+            this.label7.TabIndex = 58;
+            this.label7.Text = "Time:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.textBox2.Location = new System.Drawing.Point(493, 261);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(226, 20);
+            this.textBox2.TabIndex = 59;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.button1.Location = new System.Drawing.Point(642, 323);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(77, 26);
+            this.button1.TabIndex = 60;
+            this.button1.Text = "Add";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // UpdatesReminders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(819, 548);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.button3);
@@ -218,5 +254,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -20,7 +20,7 @@ namespace CollegeApplicationTracker
             textBox1.Text = _application.Location;
             textBox2.Text = _application.Platform;
             textBox3.Text = _application.DueDate;
-            textBox4.Text = _application.Ranking; // Assuming textBox4 is for Ranking
+            //textBox4.Text = _application.Ranking; // Assuming textBox4 is for Ranking
             checkedListBox1.SetItemChecked(checkedListBox1.Items.IndexOf(_application.Status), true);
             checkedListBox2.SetItemChecked(checkedListBox2.Items.IndexOf(_application.Type), true);
         }
@@ -31,7 +31,7 @@ namespace CollegeApplicationTracker
             _application.Location = textBox1.Text;
             _application.Platform = textBox2.Text;
             _application.DueDate = textBox3.Text;
-            _application.Ranking = textBox4.Text; // Ensure ranking is saved
+            //_application.Ranking = textBox4.Text; // Ensure ranking is saved
             _application.Status = checkedListBox1.CheckedItems.Count > 0 ? checkedListBox1.CheckedItems[0].ToString() : string.Empty;
             _application.Type = checkedListBox2.CheckedItems.Count > 0 ? checkedListBox2.CheckedItems[0].ToString() : string.Empty;
 

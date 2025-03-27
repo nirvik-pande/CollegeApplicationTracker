@@ -54,6 +54,7 @@
   <ItemGroup>
     <Compile Include="application.cs" />
     <Compile Include="applicationdata.cs" />
+    <Compile Include="ReminderData.cs" />
     <Compile Include="CreateAccount.cs">
       <SubType>Form</SubType>
     </Compile>
