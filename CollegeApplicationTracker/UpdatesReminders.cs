@@ -16,5 +16,17 @@ namespace CollegeApplicationTracker
         {
             InitializeComponent();
         }
+
+        private void UpdatesReminders_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form2 applicationDashboard = new Form2();
+            applicationDashboard.Show();
+            this.Hide();
+        }
     }
 }

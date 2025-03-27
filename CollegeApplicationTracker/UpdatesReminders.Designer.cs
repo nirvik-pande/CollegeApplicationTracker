@@ -153,6 +153,7 @@
             this.button3.TabIndex = 55;
             this.button3.Text = "Back";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // linkLabel1
             // 
@@ -195,6 +196,7 @@
             this.Controls.Add(this.label2);
             this.Name = "UpdatesReminders";
             this.Text = "UpdatesReminders";
+            this.Load += new System.EventHandler(this.UpdatesReminders_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

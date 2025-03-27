@@ -29,7 +29,7 @@ namespace CollegeApplicationTracker
                 DueDate = dueDate,
                 Status = status,
                 Type = type,
-                Image = image
+            
             };
 
             ApplicationData.Applications.Add(newApplication);

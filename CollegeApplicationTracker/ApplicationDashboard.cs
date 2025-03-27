@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Configuration;
 using System.Drawing;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace CollegeApplicationTracker
@@ -13,10 +14,16 @@ namespace CollegeApplicationTracker
             LoadApplications();
         }
 
-        private void LoadApplications()
+        private void LoadApplications(string name = "", string type = "", string status = "")
         {
             listBox1.Items.Clear();
-            foreach (var app in ApplicationData.Applications)
+            var filteredApps = ApplicationData.Applications.Where(app =>
+                (string.IsNullOrEmpty(name) || app.Name.IndexOf(name, StringComparison.OrdinalIgnoreCase) >= 0) &&
+                (string.IsNullOrEmpty(type) || app.Type == type) &&
+                (string.IsNullOrEmpty(status) || app.Status == status)
+            );
+
+            foreach (var app in filteredApps)
             {
                 listBox1.Items.Add(app);
             }
@@ -33,23 +40,24 @@ namespace CollegeApplicationTracker
 
             Application app = (Application)listBox1.Items[e.Index];
             e.DrawBackground();
-            e.Graphics.DrawImage(app.Image, e.Bounds.Left, e.Bounds.Top, 50, 50);
             e.Graphics.DrawString(app.Name, e.Font, Brushes.Black, e.Bounds.Left + 60, e.Bounds.Top);
             e.Graphics.DrawString(app.Location, e.Font, Brushes.Gray, e.Bounds.Left + 60, e.Bounds.Top + 20);
             e.Graphics.DrawString(app.Platform, e.Font, Brushes.Gray, e.Bounds.Left + 60, e.Bounds.Top + 40);
             e.Graphics.DrawString(app.DueDate, e.Font, Brushes.Gray, e.Bounds.Left + 60, e.Bounds.Top + 60);
             e.Graphics.DrawString(app.Status, e.Font, Brushes.Gray, e.Bounds.Left + 60, e.Bounds.Top + 80);
+            e.Graphics.DrawString(app.Type, e.Font, Brushes.Gray, e.Bounds.Left + 60, e.Bounds.Top + 100); 
             e.DrawFocusRectangle();
         }
 
-        private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Handle the event when the selected index of checkedListBox2 changes
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-            // Handle the event when label3 is clicked
+            if (listBox1.SelectedIndex >= 0)
+            {
+                Application selectedApp = (Application)listBox1.SelectedItem;
+                UpdateApplication updateApplicationPage = new UpdateApplication(selectedApp);
+                updateApplicationPage.Show();
+                this.Hide();
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -62,7 +70,12 @@ namespace CollegeApplicationTracker
 
         private void button2_Click(object sender, EventArgs e)
         {
-        
+            // Navigate to the Settings page
+            /*
+            SettingsPage settingsPage = new SettingsPage();
+            settingsPage.Show();
+            this.Hide();
+            */
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -71,6 +84,30 @@ namespace CollegeApplicationTracker
             AddNewApplication addNewApplicationPage = new AddNewApplication();
             addNewApplicationPage.Show();
             this.Hide();
+        }
+
+        private void checkedListBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Handle the event when the selected index of checkedListBox2 changes
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            // Handle the event when label3 is clicked
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            // Handle the event when Form2 is loaded
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            string name = textBox1.Text;
+            string type = checkedListBox1.CheckedItems.Count > 0 ? checkedListBox1.CheckedItems[0].ToString() : string.Empty;
+            string status = checkedListBox2.CheckedItems.Count > 0 ? checkedListBox2.CheckedItems[0].ToString() : string.Empty;
+
+            LoadApplications(name, type, status);
         }
     }
 }

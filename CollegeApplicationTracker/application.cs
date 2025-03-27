@@ -8,6 +8,6 @@
         public string DueDate { get; set; }
         public string Status { get; set; }
         public string Type { get; set; }
-        public System.Drawing.Image Image { get; set; }
+        public string Ranking { get; set; } 
     }
 }

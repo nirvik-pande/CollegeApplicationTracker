@@ -29,6 +29,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.buttonSearch = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -132,7 +133,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button1.Location = new System.Drawing.Point(122, 354);
+            this.button1.Location = new System.Drawing.Point(122, 414);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 34);
             this.button1.TabIndex = 26;
@@ -143,7 +144,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.button2.Location = new System.Drawing.Point(122, 401);
+            this.button2.Location = new System.Drawing.Point(122, 465);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(120, 23);
             this.button2.TabIndex = 27;
@@ -154,7 +155,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.Location = new System.Drawing.Point(122, 442);
+            this.button3.Location = new System.Drawing.Point(475, 442);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(86, 46);
             this.button3.TabIndex = 28;
@@ -172,6 +173,17 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // buttonSearch
+            // 
+            this.buttonSearch.BackColor = System.Drawing.Color.DarkSeaGreen;
+            this.buttonSearch.Location = new System.Drawing.Point(122, 362);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(120, 34);
+            this.buttonSearch.TabIndex = 31;
+            this.buttonSearch.Text = "Search";
+            this.buttonSearch.UseVisualStyleBackColor = false;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
+            // 
             // listBox1
             // 
             this.listBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
@@ -180,8 +192,9 @@
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(365, 303);
             this.listBox1.TabIndex = 30;
-            this.listBox1.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.listBox1_MeasureItem);
             this.listBox1.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.listBox1_DrawItem);
+            this.listBox1.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.listBox1_MeasureItem);
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // Form2
             // 
@@ -189,6 +202,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(819, 548);
+            this.Controls.Add(this.buttonSearch);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -205,6 +219,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form2";
             this.Text = "ApplicationDashboard";
+            this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -224,6 +239,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buttonSearch; // Added this line
         private System.Windows.Forms.ListBox listBox1;
     }
 }
+
+
